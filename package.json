@@ -1,0 +1,26 @@
+{
+  "name": "johunus-qa-challenge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reto técnico Playwright y TypeScript",
+  "scripts": {
+    "test": "playwright test",
+    "test:api": "playwright test tests/api",
+    "test:e2e": "playwright test tests/e2e",
+    "test:twice": "playwright test && playwright test",
+    "test:e2e:headed": "playwright test tests/e2e --headed",
+    "test:debug": "playwright test tests/e2e --debug",
+    "typecheck": "tsc --noEmit",
+    "verify": "npm run typecheck && npm run test:twice",
+    "report": "playwright show-report"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^22.17.0",
+    "dotenv": "^16.6.1",
+    "typescript": "^5.9.2"
+  }
+}
